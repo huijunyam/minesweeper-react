@@ -1,5 +1,5 @@
 import React from 'react';
-import * as Minesweeper from './minesweeper';
+import * as Minesweeper from '../minesweeper';
 import Board from './board';
 
 class Game extends React.Component {
@@ -10,11 +10,15 @@ class Game extends React.Component {
   }
 
   updateGame() {
-
+    
   }
 
   render() {
-    return (<Board board={this.state.board} updateGame={this.updateGame}/>);
+    return (
+      <div>
+        <Board board={this.state.board} updateGame={this.updateGame} />)
+      </div>
+    );
   }
 }
 
