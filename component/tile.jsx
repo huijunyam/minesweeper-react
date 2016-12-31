@@ -18,7 +18,7 @@ class Tile extends React.Component {
     if (tile.explored) {
       if (tile.bombed) {
         klass = 'bombed';
-        text = '\u2622';
+        text = '\uD83D\uDCA3';
       } else {
         klass = 'explored';
         count = tile.adjacentBombCount();
@@ -30,7 +30,7 @@ class Tile extends React.Component {
     } else {
       klass = 'unexplored';
     }
-    klass = `tile ${klass}`;
+    klass = `tile-${klass}`;
 
     return (
       <div className={klass} onClick={this.handleClick}>{text}</div>

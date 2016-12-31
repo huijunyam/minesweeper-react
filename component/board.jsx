@@ -10,7 +10,7 @@ class Board extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className="grid">
         {this.renderGrid()}
       </div>
     );
@@ -20,7 +20,7 @@ class Board extends React.Component {
     const grid = this.props.board.grid;
     return grid.map((row, idx) => {
       return (
-        <div key={idx}>
+        <div className="row" key={idx}>
           {this.renderTile(row, idx)}
         </div>
       );
