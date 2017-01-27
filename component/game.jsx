@@ -28,13 +28,13 @@ class Game extends React.Component {
     let gameOver;
     if (this.state.board.lost() || this.state.board.won()) {
       const gameOverText = this.state.board.won() ? "You won!" : "You lost!";
-      gameOver =
+      gameOver = (
         <div className='modal-screen'>
           <div className='modal-content'>
             <p>{gameOverText}</p>
             <button onClick={this.restartGame}>Play Again</button>
           </div>
-        </div>;
+        </div>);
     }
 
     return (
